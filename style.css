@@ -614,6 +614,95 @@ canvas {
   animation-duration: 1.5s;
 }
 
+.impact-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.impact-section {
+  border-radius: 50%;
+  background: var(--main-color);
+  color: white;
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.impact-section-numbers {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .impact-container {
+    flex-direction: column;
+  }
+
+  .impact-section {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 2rem;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.profile-section {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.profiles {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.profile {
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  padding-bottom: 5px;
+  width: 18rem;
+}
+
+.profile-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+}
+
 @keyframes fade {
   from {
     opacity: 0.4;

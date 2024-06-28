@@ -52,32 +52,92 @@ ScrollReveal().reveal('.home-img, .experience-container, .project-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img, .contact_info1', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content, .contact_info2', { origin: 'right' });
 
-
 // slideshow js
-let slideIndex = 1;
-showSlides(slideIndex);
+// function showSlides(n) {
+//     let i;
+//     let slides = document.getElementsByClassName("slide");
+//     let dots = document.getElementsByClassName("slide-dot");
+//     if (n > slides.length) { slideIndex = 1 }
+//     if (n < 1) { slideIndex = slides.length }
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     for (i = 0; i < dots.length; i++) {
+//         dots[i].className = dots[i].className.replace(" dotActive", "");
+//     }
+//     slides[slideIndex - 1].style.display = "block";
+//     dots[slideIndex - 1].className += " dotActive";
+// }
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+// let slideIndex = 1;
+// showSlides(slideIndex);
+
+
+// function plusSlides(n) {
+//     showSlides(slideIndex += n);
+// }
+
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// }
+
+
+var exec = document.getElementsByClassName("executive-collapsible");
+var i;
+
+for (i = 0; i < exec.length; i++) {
+    exec[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+var marketing = document.getElementsByClassName("marketing-collapsible");
+var i;
+
+for (i = 0; i < marketing.length; i++) {
+    marketing[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
 }
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("slide-dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" dotActive", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " dotActive";
+var web = document.getElementsByClassName("web-collapsible");
+var i;
+
+for (i = 0; i < web.length; i++) {
+    web[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
 }
 
+var outreach = document.getElementsByClassName("outreach-collapsible");
+var i;
+
+for (i = 0; i < outreach.length; i++) {
+    outreach[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
